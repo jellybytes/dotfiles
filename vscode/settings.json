@@ -9,6 +9,9 @@
 
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
 
     "explorer.compactFolders": false,
 
@@ -31,5 +34,4 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "explorer.confirmPasteNative": false,
-    "editor.tabSize": 4,
 }
