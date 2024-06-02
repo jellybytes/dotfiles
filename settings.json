@@ -1,0 +1,35 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.iconTheme": "vscode-icon-theme",
+    "workbench.tree.indent": 16,
+    "workbench.editor.restoreViewState": false,
+    "workbench.startupEditor": "none",
+    "workbench.settings.applyToAllProfiles": [
+    ],
+
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+
+    "explorer.compactFolders": false,
+
+    "window.titleBarStyle": "custom",
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.restoreWindows": "none",
+    "window.newWindowDimensions": "maximized",
+
+    "remote.SSH.remotePlatform": {
+        "sechs-grfsoc1": "linux",
+        "10.13.37.69": "linux",
+        "10.13.37.25": "linux"
+    },
+
+    "files.hotExit": "off",
+    "workbench.editor.mouseBackForwardToNavigate": false,
+    "workbench.editor.navigationScope": "editor",
+    "window.commandCenter": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmPasteNative": false,
+    "editor.tabSize": 4,
+}
