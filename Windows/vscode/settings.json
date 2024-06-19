@@ -1,11 +1,10 @@
 {
-    "workbench.colorTheme": "Default Dark Modern",
-    "workbench.iconTheme": "vscode-icon-theme",
+	"workbench.iconTheme": "vs-nomo-dark",
     "workbench.tree.indent": 16,
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
-    "workbench.settings.applyToAllProfiles": [
-    ],
+    "workbench.editor.mouseBackForwardToNavigate": false,
+    "workbench.editor.navigationScope": "editor",
 
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
@@ -14,24 +13,18 @@
     "editor.insertSpaces": false,
 
     "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+	"explorer.confirmPasteNative": false,
 
     "window.titleBarStyle": "custom",
     "window.customMenuBarAltFocus": false,
     "window.enableMenuBarMnemonics": false,
     "window.restoreWindows": "none",
     "window.newWindowDimensions": "maximized",
-
-    "remote.SSH.remotePlatform": {
-        "sechs-grfsoc1": "linux",
-        "10.13.37.69": "linux",
-        "10.13.37.25": "linux"
-    },
-
-    "files.hotExit": "off",
-    "workbench.editor.mouseBackForwardToNavigate": false,
-    "workbench.editor.navigationScope": "editor",
     "window.commandCenter": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmPasteNative": false,
+	"window.density.editorTabHeight": "compact",
+	"window.menuBarVisibility": "compact",
+
+    "files.hotExit": "off"
 }
