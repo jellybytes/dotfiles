@@ -1,12 +1,7 @@
-## Install PowerShell Windows
-# run scripts
-Config for configs are located under: `~\Documents\WindowsPowerShell`. Enter `echo $PROFILE` to locate the config file.
+# Windows / Linux configs
+## Windows configs
+In order to run scripts run: `PS C:\> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+To apply configs run the script: `PS C:\> dotfiles/windows/Config-Windos.ps1 set-config`. 
 
-# Configure Visual Studio Code
-
-Configs are located under: `~\AppData\Roaming\Code\User\`.
-
-Some useful commands:
-`echo $enf:path`
+If configs on local machine changed run: `PS C:\> dotfiles/windows/Config-Windos.ps1 set-config` and commit changes.
