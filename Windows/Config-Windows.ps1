@@ -2,6 +2,8 @@
 #   config -> apply configes file into filesystem
 #   get-config -> get current configured 
 
+# NOTE: need to create folders before Copy-Item -> else Could not fid part of path..
+
 $param=$args[0]
 if ($param -eq "set-config") {
 	# Visual Code Editor
