@@ -1,10 +1,11 @@
 {
-	"workbench.iconTheme": "vs-nomo-dark",
-    "workbench.tree.indent": 16,
+	"workbench.tree.indent": 16,
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
     "workbench.editor.mouseBackForwardToNavigate": false,
     "workbench.editor.navigationScope": "editor",
+	"workbench.colorCustomizations": {
+	},
 
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
@@ -27,9 +28,13 @@
 	"window.menuBarVisibility": "compact",
 
 	"files.hotExit": "off",
+
 	"remote.SSH.remotePlatform": {
 		"homepage": "linux",
 		"traefik": "linux",
-		"blog": "linux"
-	}
+		"blog": "linux",
+		"dev": "linux"
+	},
+
+	"breadcrumbs.enabled": false
 }
