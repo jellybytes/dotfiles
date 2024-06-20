@@ -7,11 +7,12 @@ if ($param -eq "set-config") {
 	# Visual Code Editor
 	Copy-Item .\vscode\settings.json  ~\AppData\Roaming\Code\User\settings.json -Force
 	Copy-Item .\vscode\keybindings.json  ~\AppData\Roaming\Code\User\keybindings.json -Force
+	Write-Output "VSCode configured!"
+
 	# Power Shell
 	Copy-Item .\PowerShell\Microsoft.PowerShell_profile.ps1  ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -Force
 	Copy-Item .\PowerShell\Microsoft.PowerShell_profile.ps1  ~\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1 -Force
-
-	Write-Output "PowerShell Profile succsessfully set!"
+	Write-Output "PowerShell Profile configured!"
 }
 elseif ($param -eq "get-config") {
 	# Visual Code Editor

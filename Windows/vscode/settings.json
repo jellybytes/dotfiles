@@ -26,5 +26,10 @@
 	"window.density.editorTabHeight": "compact",
 	"window.menuBarVisibility": "compact",
 
-    "files.hotExit": "off"
+	"files.hotExit": "off",
+	"remote.SSH.remotePlatform": {
+		"homepage": "linux",
+		"traefik": "linux",
+		"blog": "linux"
+	}
 }
