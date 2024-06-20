@@ -8,5 +8,5 @@ Import-Module PSColor
 
 # Prompt
 function prompt {
-	"$([char]27)[32m$([Environment]::UserName)$([char]27)[0m" + "@" + "$([char]27)[34m$((Get-ChildItem  Env:Computername).Value)$([char]27)[0m" + "$([char]27)[35m(" + "$((Get-Location).Path.Split("\")[-1])" + ")$([char]27)[0m > "
+	"[$([char]27)[32m$([Environment]::UserName)$([char]27)[0m" + "@" + "$([char]27)[32m$((Get-ChildItem  Env:Computername).Value)$([char]27)[0m" + "$([char]27)[34m:" + "$((Get-Location).Path.Split("\")[-1])" + "$([char]27)[0m]> "
 }
