@@ -33,7 +33,8 @@
 		"homepage": "linux",
 		"traefik": "linux",
 		"blog": "linux",
-		"dev": "linux"
+		"dev": "linux",
+		"cloudflare-access": "linux"
 	},
 
 	"breadcrumbs.enabled": false
