@@ -7,11 +7,13 @@
 	"workbench.colorCustomizations": {
 	},
 
+	"breadcrumbs.enabled": false,
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
     "editor.tabSize": 4,
     "editor.detectIndentation": false,
     "editor.insertSpaces": false,
+	"editor.stickyScroll.enabled": false,
 
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
@@ -37,5 +39,90 @@
 		"cloudflare-access": "linux"
 	},
 
-	"breadcrumbs.enabled": false
+	"latex-workshop.latex.tools": [
+		{
+			"name": "latexmk",
+			"command": "latexmk",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"-outdir=%DIR%/build",
+				"%DIR%/main.tex"
+			],
+			"env": { 
+			}
+		},
+		{
+			"name": "pdflatex",
+			"command": "pdflatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOC%"
+			],
+			"env": {}
+		},
+		{
+			"name": "bibtex",
+			"command": "bibtex",
+			"args": [
+				"%DOCFILE%"
+			],
+			"env": {}
+		}
+	],
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "latexmk",
+			"tools": [
+				"latexmk"
+			]
+		},
+		{
+			"name": "pdflatex -> bibtex -> pdflatex * 2",
+			"tools": [
+				"pdflatex",
+				"bibtex",
+				"pdflatex",
+				"pdflatex"
+			]
+		}
+	],
+	"latex-workshop.latex.clean.args": [
+		"-outdir=%DIR%/build",
+		"-c",
+		"%TEX%"
+	],
+	"latex-workshop.latex.clean.method": "glob",
+	"latex-workshop.latex.clean.fileTypes": [
+		"%DIR%/build/*.aux",
+		"%DIR%/build/*.bbl",
+		"%DIR%/build/*.blg",
+		"%DIR%/build/*.idx",
+		"%DIR%/build/*.ind",
+		"%DIR%/build/*.lof",
+		"%DIR%/build/*.lot",
+		"%DIR%/build/*.out",
+		"%DIR%/build/*.toc",
+		"%DIR%/build/*.acn",
+		"%DIR%/build/*.acr",
+		"%DIR%/build/*.alg",
+		"%DIR%/build/*.glg",
+		"%DIR%/build/*.glo",
+		"%DIR%/build/*.gls",
+		"%DIR%/build/*.fls",
+		"%DIR%/build/*.log",
+		"%DIR%/build/*.fdb_latexmk",
+		"%DIR%/build/*.snm",
+		"%DIR%/build/*.synctex(busy)",
+		"%DIR%/build/*.synctex",
+		"%DIR%/build/*.synctex.gz(busy)",
+		"%DIR%/build/*.synctex.gz",
+		"%DIR%/build/*.nav",
+		"%DIR%/build/*.vrb",
+		"%DIR%/build/src/tex/*.aux",
+	]
 }

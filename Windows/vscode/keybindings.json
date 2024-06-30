@@ -280,5 +280,5 @@
     {
         "key": "shift+alt+f",
         "command": "workbench.action.files.openFile"
-    }
+	}
 ]
