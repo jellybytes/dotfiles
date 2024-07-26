@@ -39,6 +39,7 @@
 		"cloudflare-access": "linux"
 	},
 
+	"latex-workshop.synctex.afterBuild.enabled":true,
 	"latex-workshop.latex.tools": [
 		{
 			"name": "latexmk",
@@ -113,6 +114,7 @@
 		"%DIR%/build/*.glg",
 		"%DIR%/build/*.glo",
 		"%DIR%/build/*.gls",
+		"%DIR%/build/*.glsdefs",
 		"%DIR%/build/*.fls",
 		"%DIR%/build/*.log",
 		"%DIR%/build/*.fdb_latexmk",
@@ -124,5 +126,6 @@
 		"%DIR%/build/*.nav",
 		"%DIR%/build/*.vrb",
 		"%DIR%/build/src/tex/*.aux",
-	]
+	],
+	"git.enableSmartCommit": true
 }
