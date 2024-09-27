@@ -127,5 +127,11 @@
 		"%DIR%/build/*.vrb",
 		"%DIR%/build/src/tex/*.aux",
 	],
-	"git.enableSmartCommit": true
+	"git.enableSmartCommit": true,
+	"makefile.configureOnOpen": true,
+	"stm32-for-vscode.openOCDPath": "C:\\USERS\\SIMON\\APPDATA\\ROAMING\\CODE\\USER\\GLOBALSTORAGE\\BMD.STM32-FOR-VSCODE\\@XPACK-DEV-TOOLS\\OPENOCD\\0.12.0-4.1\\.CONTENT\\BIN\\OPENOCD.EXE",
+	"stm32-for-vscode.makePath": "C:\\USERS\\SIMON\\APPDATA\\ROAMING\\CODE\\USER\\GLOBALSTORAGE\\BMD.STM32-FOR-VSCODE\\@XPACK-DEV-TOOLS\\WINDOWS-BUILD-TOOLS\\4.4.1-3.1\\.CONTENT\\BIN\\MAKE.EXE",
+	"stm32-for-vscode.armToolchainPath": "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\bmd.stm32-for-vscode\\@xpack-dev-tools\\arm-none-eabi-gcc\\13.3.1-1.1.1\\.content\\bin",
+	"cortex-debug.openocdPath": "C:\\USERS\\SIMON\\APPDATA\\ROAMING\\CODE\\USER\\GLOBALSTORAGE\\BMD.STM32-FOR-VSCODE\\@XPACK-DEV-TOOLS\\OPENOCD\\0.12.0-4.1\\.CONTENT\\BIN\\OPENOCD.EXE",
+	"cortex-debug.armToolchainPath": "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\bmd.stm32-for-vscode\\@xpack-dev-tools\\arm-none-eabi-gcc\\13.3.1-1.1.1\\.content\\bin"
 }
