@@ -1,0 +1,226 @@
+
+:root {
+	/* GitHub color theme */
+	--foreground: #5C6370;
+	--black: #1b1f23;
+	--background: #24292E;
+	--white: #fff;
+  	--gray: #d1d5da;
+	--blue: #79b8ff;
+  	--green: #85e89d;
+  	--yellow: #ffea7f;
+  	--orange: #ffab70;
+  	--red: #f97583;
+	--purple: #b392f0; 
+  	--pink: #f692ce;
+}
+
+/* Global styles for ToolTip */
+QToolTip {
+    padding: 6px;
+    color: var(--gray);
+    font-size: 12px;
+    background-color: var(--background);
+    border: 0px solid var(--blue);
+    border-radius: 6px;
+}
+* {
+    font-size: 12px;
+    color: var(--gray);
+    font-weight: 600;
+    font-family: "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+}
+.yasb-bar {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+	/* border: 1px solid var(--purple); */
+    border-radius: 6px;
+}
+.widget {
+    padding: 0 0px;
+    margin: 0;
+}
+.icon {
+    font-size: 16px;
+}
+.widget .label {
+    padding: 0px 3px;
+}
+
+/* apps-widget */
+.apps-widget {
+    padding: 0 6px;
+}
+.apps-widget .label {
+    font-size: 16px;
+    color: var(--white);
+}
+.apps-widget .label:hover {
+    color: var(--gray);
+}
+
+/* power-menu-widget */
+.power-menu-widget .label {
+    font-size: 16px;
+	padding: 0 12px 0 0;
+    color: var(--red);
+}
+.power-menu-widget .label {
+	font-size: 18px;
+}
+/* power-menu-popup */
+.power-menu-popup {
+    background-color: transparent
+}
+.power-menu-popup .button {
+    padding: 0;
+    width: 180px;
+    height: 230px;
+    border-radius: 8px;
+    background-color: var(--background);
+    color: var(--gray);
+    border: 2px solid var(--background);
+    margin: 0px;
+}
+.power-menu-popup .button.hover {
+    background-color: var(--background);
+    border: 2px solid var(--yellow);
+}
+.power-menu-popup .button .label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--purple)
+}
+.power-menu-popup .button.hover .label {
+	color: var(--yellow);
+}
+.power-menu-popup .button.hover .icon {
+	color: var(--yellow);
+}
+.power-menu-popup .button .icon {
+    font-size: 64px;
+    padding-top: 32px;
+    color: var(--purple);
+}
+.power-menu-popup .button.cancel .icon {
+    padding: 0;
+    margin: 0;
+}
+.power-menu-popup .button.cancel .label {
+    color: var(--red);
+    margin: 0;
+}
+.power-menu-popup .button.cancel {
+    height: 32px;
+    border-radius: 4px;
+}
+/* power-menu uptime */
+.uptime {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* microphone-widget */
+.microphone-widget {
+    padding: 0 6px 0 0;
+}
+.microphone-widget .icon {
+    font-size: 18px;
+    color: var(--green);
+    margin: 0 2px 0 0;
+}
+
+.clock-widget {
+	padding: 0 6px 0 0;
+}
+
+/* volume-widget */
+.volume-widget {
+    padding: 0 6px 0 0;
+}
+.volume-widget .icon {
+	font-size: 16px;
+    color: var(--blue);
+    margin: 0 2px 0 0;
+}
+
+/* home-widget */
+.home-widget {
+    padding: 0 12px 0 12px;
+}
+.home-widget .icon {
+	font-size: 18px;
+    color: var(--white);
+}
+.home-widget .icon:hover {
+    color: var(--blue);
+}
+.home-menu {
+    background-color: var(--background);
+}
+.home-menu .menu-item {
+    padding: 8px 48px 9px 16px;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--white);
+    font-weight: 600;
+}
+.home-menu .menu-item:hover {
+    background-color: var(--background);
+    color: var(--blue);
+}
+.home-menu:separator {
+    height: 1px;
+    background-color: var(--green);
+}
+
+/* glazewm-workspaces */
+.glazewm-workspaces {
+    margin: 0;
+}
+.glazewm-workspaces .ws-btn {
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    padding: 6px 6px 6px 6px;
+    /* margin: 0 2px 0 2px; */
+    color: var(--white);
+}
+.glazewm-workspaces .ws-btn.active {
+    background-color: var(--green);
+	color: var(--background);
+}
+.glazewm-workspaces .ws-btn.populated {
+    color: var(--white);
+}
+.glazewm-workspaces .ws-btn.empty {
+    color: var(--black);
+}
+.glazewm-workspaces .ws-btn:hover,
+.glazewm-workspaces .ws-btn.populated:hover,
+.glazewm-workspaces .ws-btn.empty:hover {
+    background-color: var(--green);
+	color: var(--background);
+}
+
+/* glazewm-tiling */
+.glazewm-tiling-direction {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.glazewm-tiling-direction .btn {
+    font-size: 20px;
+    padding: 0 6px ;
+    color: var(--green);
+    border: none;
+}
+.glazewm-tiling-direction .btn:hover {
+    background-color: var(--black);
+}

@@ -1,0 +1,153 @@
+# This is default and very simple configuration file for Yasb. 
+# For more information about configuration options, please visit the Wiki https://github.com/amnweb/yasb/wiki
+watch_stylesheet: true
+watch_config: true
+debug: false
+bars:
+  primary-bar:
+    enabled: true
+    screens: ["*"]
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: false
+    animation:
+      enabled: true
+      duration: 1000
+    blur_effect:
+      enabled: false
+      acrylic: false
+      dark_mode: false
+      round_corners: false
+      round_corners_type: "normal"
+      border_color: "System"
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 32
+    padding:
+      top: 4
+      left: 4
+      bottom: 0
+      right: 4
+    widgets:
+      left: [
+        "home",
+        "glazewm_workspaces"
+        # "glazewm_tiling_direction"
+      ]
+      center: [
+        "clock"
+      ]
+      right: [
+        "microphone",
+        "volume",
+        "power_menu"
+        ]
+widgets:
+  home:
+    type: "yasb.home.HomeWidget"
+    options:
+      # label: "<span>\udb82\ude21</span>"
+      label: "<span>\ue70f</span>"
+      menu_list:
+      - { title: "User Home", path: "~" }
+      - { title: "Download", path: "~\\Downloads" }
+      - { title: "Documents", path: "~\\Documents" }
+      - { title: "Pictures", path: "~\\Pictures" }
+      system_menu: true
+      power_menu: true
+      blur: false
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_no_window: ""
+      label_icon: true
+      label_icon_size: 14
+      max_length: 56
+      max_length_ellipsis: "..."
+      monitor_exclusive: false
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "\uf017 {%H:%M}"
+      # label: "\uf017 {%H:%M:%S}"
+      # label_alt: "\uf017 {%d-%m-%y %H:%M:%S}"
+      locale: ""
+      update_interval: 1000
+      timezones: []
+      calendar: 
+        blur: True
+        round_corners: True
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "center"
+        direction: "down"
+  glazewm_workspaces:
+    type: "glazewm.workspaces.GlazewmWorkspacesWidget"
+    options:
+      offline_label: "GlazeWM Offline"
+      hide_empty_workspaces: true
+      hide_if_offline: false
+
+      # By default workspace names are fetched from GlazeWM and "display_name" option takes priority over "name".
+      # However, you can customize populated and empty labels here using {name} and {display_name} placeholders if needed.
+      # {name} will be replaced with workspace name (index) from GlazeWM.
+      # {display_name} will be replaced with workspace display_name from GlazeWM.
+
+      # populated_label: "{display_name}"
+      # populated_label: "{name} {display_name} \uebb4"
+      # empty_label: "{display_name}"
+      # empty_label: "{name} {display_name} \uebb5"
+  glazewm_tiling_direction:
+    type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
+    options:
+      horizontal_label: "\udb81\udce1"
+      vertical_label: "\udb81\udce2"
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      tooltip: false
+      volume_icons:
+        - "\ueee8"
+        - "\uf026"
+        - "\uf027"
+        - "\uf027"
+        - "\uf028"
+      callbacks:
+        on_left: "toggle_mute"
+        on_right: "exec cmd.exe /c start ms-settings:sound"
+  microphone:
+    type: "yasb.microphone.MicrophoneWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "<span>{icon}</span> {level}%"
+      icons:
+        normal: "\udb80\udf6c"
+        muted: "\udb80\udf6d"
+      callbacks:
+        on_left: "toggle_mute"
+        on_middle: "toggle_label"
+        on_right: "exec cmd.exe /c start ms-settings:sound"
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 200
+      button_row: 5
+      buttons:
+        shutdown: ["\uf011", "Shut Down"]
+        restart: ["\uead2", "Restart"]
+        signout: ["\udb80\udf43", "Sign out"]
+        hibernate: ["\uf28e", "Hibernate"]
+        sleep: ["\u23fe", "Sleep"]
+        cancel: ["", "Cancel"]
