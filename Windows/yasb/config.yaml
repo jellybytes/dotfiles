@@ -99,9 +99,9 @@ widgets:
       # {name} will be replaced with workspace name (index) from GlazeWM.
       # {display_name} will be replaced with workspace display_name from GlazeWM.
 
-      # populated_label: "{display_name}"
+      populated_label: "{display_name}"
       # populated_label: "{name} {display_name} \uebb4"
-      # empty_label: "{display_name}"
+      empty_label: "{display_name}"
       # empty_label: "{name} {display_name} \uebb5"
   glazewm_tiling_direction:
     type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
