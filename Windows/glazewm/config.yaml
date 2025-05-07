@@ -92,7 +92,7 @@ window_effects:
       enabled: true
       color: *back
     hide_title_bar:
-      enabled: false
+      enabled: true
     corner_style:
       enabled: false
       style: 'square'
@@ -124,34 +124,6 @@ window_behavior:
       # Whether to show fullscreen windows as always on top.
       shown_on_top: false
 
-workspaces:
-  - name: '1'
-    bind_to_monitor: 0
-    display_name: '1'
-  - name: '2'
-    bind_to_monitor: 0
-    display_name: '2'
-  - name: '3'
-    bind_to_monitor: 0
-    display_name: '3'
-  - name: '4'
-    bind_to_monitor: 1
-    display_name: '1'
-  - name: '5'
-    bind_to_monitor: 1
-    display_name: '2'
-  - name: '6'
-    bind_to_monitor: 1
-    display_name: '3'
-  - name: '7'
-    bind_to_monitor: 2
-    display_name: '1'
-  - name: '8'
-    bind_to_monitor: 2
-    display_name: '2'
-  - name: '9'
-    bind_to_monitor: 2
-    display_name: '3'
 
 window_rules:
   - commands: ['ignore']
@@ -176,16 +148,57 @@ binding_modes:
   - name: 'resize'
     keybindings:
       - commands: ['resize --width -2%']
-        bindings: ['h', 'left']
+        bindings: ['h']
       - commands: ['resize --width +2%']
-        bindings: ['l', 'right']
+        bindings: ['l']
       - commands: ['resize --height +2%']
-        bindings: ['k', 'up']
+        bindings: ['k']
       - commands: ['resize --height -2%']
-        bindings: ['j', 'down']
+        bindings: ['j']
       # Press enter/escape to return to default keybindings.
       - commands: ['wm-disable-binding-mode --name resize']
         bindings: ['escape', 'enter']
+
+workspaces:
+  # left monitor
+  - name: '1'
+    bind_to_monitor: 0
+    display_name: '1'
+  - name: '2'
+    bind_to_monitor: 0
+    display_name: '2'
+  - name: '3'
+    bind_to_monitor: 0
+    display_name: '3'
+  - name: '4'
+    bind_to_monitor: 0
+    display_name: '4'
+  # left monitor
+  - name: '5'
+    bind_to_monitor: 1
+    display_name: '1'
+  - name: '6'
+    bind_to_monitor: 1
+    display_name: '2'
+  - name: '7'
+    bind_to_monitor: 1
+    display_name: '3'
+  - name: '8'
+    bind_to_monitor: 1
+    display_name: '4'
+  # left monitor
+  - name: '9'
+    bind_to_monitor: 2
+    display_name: '1'
+  - name: '10'
+    bind_to_monitor: 2
+    display_name: '2'
+  - name: '11'
+    bind_to_monitor: 2
+    display_name: '3'
+  - name: '12'
+    bind_to_monitor: 2
+    display_name: '4'
 
 keybindings:
   # Shift focus in a given direction.
@@ -265,6 +278,7 @@ keybindings:
     bindings: ['alt+enter']
 
   # Change focus to a workspace defined in `workspaces` config.
+  # left monitor
   - commands: ['focus --workspace 1']
     bindings: ['alt+u+1']
   - commands: ['focus --workspace 2']
@@ -272,19 +286,28 @@ keybindings:
   - commands: ['focus --workspace 3']
     bindings: ['alt+u+3']
   - commands: ['focus --workspace 4']
-    bindings: ['alt+i+1']
+    bindings: ['alt+u+4']
+  # middle monitor
   - commands: ['focus --workspace 5']
-    bindings: ['alt+i+2']
+    bindings: ['alt+i+1']
   - commands: ['focus --workspace 6']
-    bindings: ['alt+i+3']
+    bindings: ['alt+i+2']
   - commands: ['focus --workspace 7']
-    bindings: ['alt+o+1']
+    bindings: ['alt+i+3']
   - commands: ['focus --workspace 8']
-    bindings: ['alt+o+2']
+    bindings: ['alt+i+4']
+  # right monitor
   - commands: ['focus --workspace 9']
+    bindings: ['alt+o+1']
+  - commands: ['focus --workspace 10']
+    bindings: ['alt+o+2']
+  - commands: ['focus --workspace 11']
     bindings: ['alt+o+3']
+  - commands: ['focus --workspace 12']
+    bindings: ['alt+o+4']
 
   # Move focused window to a workspace defined in `workspaces` config.
+  # left monitor
   - commands: ['move --workspace 1', 'focus --workspace 1']
     bindings: ['alt+shift+u+1']
   - commands: ['move --workspace 2', 'focus --workspace 2']
@@ -292,14 +315,22 @@ keybindings:
   - commands: ['move --workspace 3', 'focus --workspace 3']
     bindings: ['alt+shift+u+3']
   - commands: ['move --workspace 4', 'focus --workspace 4']
-    bindings: ['alt+shift+i+1']
+    bindings: ['alt+shift+u+3']
+  # middle monitor
   - commands: ['move --workspace 5', 'focus --workspace 5']
-    bindings: ['alt+shift+i+2']
+    bindings: ['alt+shift+i+1']
   - commands: ['move --workspace 6', 'focus --workspace 6']
-    bindings: ['alt+shift+i+3']
+    bindings: ['alt+shift+i+2']
   - commands: ['move --workspace 7', 'focus --workspace 7']
-    bindings: ['alt+shift+o+1']
+    bindings: ['alt+shift+i+3']
   - commands: ['move --workspace 8', 'focus --workspace 8']
-    bindings: ['alt+shift+o+2']
+    bindings: ['alt+shift+i+3']
+  # middle monitor
   - commands: ['move --workspace 9', 'focus --workspace 9']
+    bindings: ['alt+shift+o+1']
+  - commands: ['move --workspace 10', 'focus --workspace 10']
+    bindings: ['alt+shift+o+2']
+  - commands: ['move --workspace 11', 'focus --workspace 11']
+    bindings: ['alt+shift+o+3']
+  - commands: ['move --workspace 12', 'focus --workspace 12']
     bindings: ['alt+shift+o+3']
