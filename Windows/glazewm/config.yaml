@@ -315,7 +315,7 @@ keybindings:
   - commands: ['move --workspace 3', 'focus --workspace 3']
     bindings: ['alt+shift+u+3']
   - commands: ['move --workspace 4', 'focus --workspace 4']
-    bindings: ['alt+shift+u+3']
+    bindings: ['alt+shift+u+4']
   # middle monitor
   - commands: ['move --workspace 5', 'focus --workspace 5']
     bindings: ['alt+shift+i+1']
@@ -324,7 +324,7 @@ keybindings:
   - commands: ['move --workspace 7', 'focus --workspace 7']
     bindings: ['alt+shift+i+3']
   - commands: ['move --workspace 8', 'focus --workspace 8']
-    bindings: ['alt+shift+i+3']
+    bindings: ['alt+shift+i+4']
   # middle monitor
   - commands: ['move --workspace 9', 'focus --workspace 9']
     bindings: ['alt+shift+o+1']
@@ -333,4 +333,4 @@ keybindings:
   - commands: ['move --workspace 11', 'focus --workspace 11']
     bindings: ['alt+shift+o+3']
   - commands: ['move --workspace 12', 'focus --workspace 12']
-    bindings: ['alt+shift+o+3']
+    bindings: ['alt+shift+o+4']
