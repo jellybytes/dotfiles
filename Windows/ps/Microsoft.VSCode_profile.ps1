@@ -8,11 +8,11 @@ $PSStyle.FileInfo.Directory = $PSStyle.Foreground.Blue
 $env:EDITOR = "code"
 
 function prompt {
-	write-host "[" -ForegroundColor Gray -NoNewline
+	write-host "" -ForegroundColor Gray -NoNewline
 	write-host "$env:UserName" -ForegroundColor Cyan -NoNewline
 	write-host "@" -ForegroundColor Green -NoNewline
 	write-host "$env:COMPUTERNAME" -ForegroundColor Cyan  -NoNewline
-	write-host "] " -ForegroundColor Gray -NoNewline
-	write-host $ExecutionContext.SessionState.Path.CurrentLocation
-	return "> "
+	write-host " " -ForegroundColor Gray -NoNewline
+	write-host $ExecutionContext.SessionState.Path.CurrentLocation -NoNewline
+	return "\> "
 }
