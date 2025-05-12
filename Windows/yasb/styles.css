@@ -1,4 +1,3 @@
-
 :root {
 	/* GitHub color theme */
 	--foreground: #5C6370;
@@ -21,7 +20,7 @@ QToolTip {
     color: var(--gray);
     font-size: 12px;
     background-color: var(--background);
-    border: 0px solid var(--blue);
+    /* border: 0px solid var(--blue); */
     border-radius: 6px;
 }
 * {
@@ -36,8 +35,8 @@ QToolTip {
     padding: 0;
     margin: 0;
     background-color: var(--background);
-	/* border: 1px solid var(--green); */
-    border-radius: 6px;
+	border: 1px solid var(--purple);
+    border-radius: 4px;
 }
 .widget {
     padding: 0 0px;
