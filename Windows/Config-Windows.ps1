@@ -18,6 +18,8 @@ if ($param -eq "set") {
 	# yasb
 	Copy-Item .\yasb\config.yaml ~\.config\yasb\config.yaml -Force
 	Copy-Item .\yasb\styles.css ~\.config\yasb\styles.css -Force
+	# starship
+	Copy-Item .\starship\starship.toml ~\.config\starship\starship.toml -Force
 
 	Write-Output "machine configured!"
 }
@@ -34,6 +36,8 @@ elseif ($param -eq "get") {
 	# yasb
 	Copy-Item ~\.config\yasb\config.yaml .\yasb\config.yaml -Force
 	Copy-Item ~\.config\yasb\styles.css .\yasb\styles.css -Force
+	# starship
+	Copy-Item ~\.config\starship\starship.toml .\starship\starship.toml -Force
 
 	Write-Output "all configs copied!"
 }
