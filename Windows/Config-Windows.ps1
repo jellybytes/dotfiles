@@ -4,13 +4,12 @@
 
 $param=$args[0]
 if ($param -eq "set") {
-	# vscode
+	# vscode synced via account
 	# Copy-Item .\vscode\settings.json  ~\AppData\Roaming\Code\User\settings.json -Force
 	# Copy-Item .\vscode\keybindings.json  ~\AppData\Roaming\Code\User\keybindings.json -Force
 	# PowerShell
 	Copy-Item .\ps\Microsoft.PowerShell_profile.ps1  ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -Force
 	Copy-Item .\ps\Microsoft.PowerShell_profile.ps1  ~\Documents\PowerShell\Microsoft.VSCode_profile.ps1 -Force
-	Write-Output "PowerShell Profile configured!"
 	# glazeWM
 	Copy-Item .\glazewm\config.yaml ~\.config\glazewm\config.yaml -Force
 	# superfile
@@ -20,6 +19,8 @@ if ($param -eq "set") {
 	Copy-Item .\yasb\styles.css ~\.config\yasb\styles.css -Force
 	# starship
 	Copy-Item .\starship\starship.toml ~\.config\starship\starship.toml -Force
+	# wt
+	Copy-Item .\wt\settings.json ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json -Force
 
 	Write-Output "machine configured!"
 }
@@ -38,6 +39,8 @@ elseif ($param -eq "get") {
 	Copy-Item ~\.config\yasb\styles.css .\yasb\styles.css -Force
 	# starship
 	Copy-Item ~\.config\starship\starship.toml .\starship\starship.toml -Force
+	# wt
+	Copy-Item ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json .\wt\settings.json
 
 	Write-Output "all configs copied!"
 }
