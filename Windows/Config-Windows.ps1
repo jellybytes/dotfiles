@@ -9,7 +9,6 @@ if ($param -eq "set") {
 	# Copy-Item .\vscode\keybindings.json  ~\AppData\Roaming\Code\User\keybindings.json -Force
 	# PowerShell
 	Copy-Item .\ps\Microsoft.PowerShell_profile.ps1  ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -Force
-	Copy-Item .\ps\Microsoft.PowerShell_profile.ps1  ~\Documents\PowerShell\Microsoft.VSCode_profile.ps1 -Force
 	# glazeWM
 	Copy-Item .\glazewm\config.yaml ~\.config\glazewm\config.yaml -Force
 	# superfile
@@ -25,11 +24,8 @@ if ($param -eq "set") {
 	Write-Output "machine configured!"
 }
 elseif ($param -eq "get") {
-	# Copy-Item ~\AppData\Roaming\Code\User\settings.json .\vscode\settings.json -Force
-	# Copy-Item ~\AppData\Roaming\Code\User\keybindings.json .\vscode\keybindings.json -Force
 	# Power Shell
 	Copy-Item ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 .\ps\Microsoft.PowerShell_profile.ps1 -Force
-	Copy-Item ~\Documents\PowerShell\Microsoft.VSCode_profile.ps1 .\ps\Microsoft.VSCode_profile.ps1 -Force
 	# glazeWM
 	Copy-Item ~\.config\glazewm\config.yaml .\glazewm\config.yaml -Force
 	# superfile
