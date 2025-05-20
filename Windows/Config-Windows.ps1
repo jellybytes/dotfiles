@@ -4,9 +4,6 @@
 
 $param=$args[0]
 if ($param -eq "set") {
-	# vscode synced via account
-	# Copy-Item .\vscode\settings.json  ~\AppData\Roaming\Code\User\settings.json -Force
-	# Copy-Item .\vscode\keybindings.json  ~\AppData\Roaming\Code\User\keybindings.json -Force
 	# PowerShell
 	Copy-Item .\ps\Microsoft.PowerShell_profile.ps1  ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -Force
 	# glazeWM

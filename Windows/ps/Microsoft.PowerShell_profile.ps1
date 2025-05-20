@@ -35,6 +35,5 @@ Set-Alias vsc fVSCodeHere
 $PSStyle.FileInfo.Directory = $PSStyle.Foreground.Blue
 
 Set-PSReadLineOption -EditMode Vi
-# Set-PSReadLineKeyHandler -Chord Tab -Function Complete
-Set-PSReadLineKeyHandler -Chord "Tab" -Function ForwardWord
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineOption -BellStyle None
