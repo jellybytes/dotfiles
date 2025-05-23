@@ -46,9 +46,9 @@ gaps:
   # Gap between windows and the screen edge.
   outer_gap:
     top: '4px'
-    right: '0px'
-    bottom: '0px'
-    left: '0px'
+    right: '4px'
+    bottom: '4px'
+    left: '4px'
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -106,6 +106,7 @@ window_behavior:
       # Whether to show fullscreen windows as always on top.
       shown_on_top: false
 
+# Print windows: Get-Process | Where-Object {$_.mainWindowTitle} | Format-Table Id, Name, mainWindowtitle -AutoSize
 window_rules:
   - commands: ['ignore']
     match:
@@ -121,6 +122,7 @@ window_rules:
         window_title: { regex: '.*? - Peek' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
+      - window_title: { regex: 'Remote Desktop Connection' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.

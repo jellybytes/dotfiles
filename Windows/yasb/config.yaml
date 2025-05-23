@@ -27,10 +27,10 @@ bars:
       width: "100%"
       height: 32
     padding:
-      top: 0
-      left: 0
+      top: 4
+      left: 4
       bottom: 0
-      right: 0
+      right: 4
     widgets:
       left: [
         "home",
