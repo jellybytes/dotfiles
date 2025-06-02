@@ -3,6 +3,7 @@
 	--foreground: #5C6370;
 	--black: #1b1f23;
 	--background: #24292E;
+	--backalpha: #2c3238;
 	--white: #fff;
   	--gray: #d1d5da;
 	--blue: #79b8ff;
@@ -34,7 +35,7 @@ QToolTip {
 .yasb-bar {
     padding: 0;
     margin: 0;
-    background-color: var(--background);
+    background-color: var(--backalpha);
 	/* border: 1px solid var(--purple); */
     /* border-radius: 4px; */
 }
@@ -66,6 +67,7 @@ QToolTip {
     font-size: 16px;
 	padding: 0 12px 0 0;
     color: var(--red);
+	background-color: var(--background);
 }
 /* power-menu-popup */
 .power-menu-popup {
@@ -125,6 +127,7 @@ QToolTip {
 /* microphone-widget */
 .microphone-widget {
     padding: 0 6px 0 0;
+	background-color: var(--background);
 }
 .microphone-widget .icon {
     font-size: 18px;
@@ -134,15 +137,14 @@ QToolTip {
 
 /* clock-widget */
 .clock-widget {
-	padding: 0 6px 0 0;
-}
-.clock-widget .icon {
-	color: var(--green);
+	padding: 0px;
+	background-color: var(--background);
 }
 
 /* volume-widget */
 .volume-widget {
     padding: 0 6px 0 0;
+	background-color: var(--background);
 }
 .volume-widget .icon {
 	font-size: 16px;
@@ -153,10 +155,11 @@ QToolTip {
 /* home-widget */
 .home-widget {
     padding: 0 12px 0 12px;
+	background-color: var(--background);
 }
 .home-widget .icon {
 	font-size: 18px;
-    color: var(--yellow);
+    /* color: var(--yellow); */
 }
 .home-widget .icon:hover {
     color: var(--blue);
@@ -199,6 +202,7 @@ QToolTip {
 }
 .glazewm-workspaces .ws-btn.populated {
     color: var(--white);
+	background-color: var(--background);
 }
 .glazewm-workspaces .ws-btn.empty {
     color: var(--black);
@@ -224,4 +228,18 @@ QToolTip {
 }
 .glazewm-tiling-direction .btn:hover {
     background-color: var(--black);
+}
+
+/* spacer */
+.spacer-widget {
+	padding: 10px;
+	background-color: var(--background);
+}
+.spacer-left-widget .icon {
+	font-size: 25px;
+	color: var(--background);
+}
+.spacer-right-widget .icon {
+	font-size: 25px;
+	color: var(--background);
 }

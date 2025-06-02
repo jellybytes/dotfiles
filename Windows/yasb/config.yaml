@@ -34,13 +34,21 @@ bars:
     widgets:
       left: [
         "home",
-        "glazewm_workspaces"
+        "glazewm_workspaces",
+        "spacer",
+        "spacer_right"
         # "glazewm_tiling_direction"
       ]
       center: [
-        "clock"
+        "spacer_left",
+        "spacer",
+        "clock",
+        "spacer",
+        "spacer_right"
       ]
       right: [
+        "spacer_left",
+        "spacer",
         "microphone",
         "volume",
         "power_menu"
@@ -157,3 +165,21 @@ widgets:
         hibernate: ["\uf28e", "Hibernate"]
         sleep: ["\u23fe", "Sleep"]
         cancel: ["", "Cancel"]
+  spacer:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: ""
+      label_alt: ""
+      class_name: "spacer-widget"
+  spacer_left:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "<span>\ue0be</span>"
+      label_alt: ""
+      class_name: "spacer-left-widget"
+  spacer_right:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "<span>\ue0bc</span>"
+      label_alt: ""
+      class_name: "spacer-right-widget"
