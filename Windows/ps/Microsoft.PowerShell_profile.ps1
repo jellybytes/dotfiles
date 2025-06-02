@@ -5,16 +5,11 @@ $env:EDITOR = "code"
 $env:STARSHIP_CONFIG = "$HOME\.config\starship\starship.toml"
 $env:XDG_CONFIG_HOME = "$Home\.config\"
 
-# Aliases
-Set-Alias spf $env:UserProfile\.config\superfile\run.bat
-Set-Alias conf $env:UserProfile\.config\superfile\run.bat
-
 Function fConf {
 	cd ~\.config\
-	code .
-	exit
 }
-Set-Alias conf fConf
+Set-Alias cdc fConf
+
 Function fCdRepos {
 	cd ~\Documents\repos\
 }
@@ -24,12 +19,6 @@ Function fCdReposWSL {
 	wsl --cd ~/repos
 }
 Set-Alias cdrw fCdReposWSL
-
-Function fVSCodeHere {
-	code .
-	exit
-}
-Set-Alias vsc fVSCodeHere
 
 # enter %PSStyle to see all colors
 $PSStyle.FileInfo.Directory = $PSStyle.Foreground.Blue

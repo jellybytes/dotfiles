@@ -1,8 +1,9 @@
 # jellybytes glazeWM config
-# colors
 blue: &blue "#79b8ff"
 green: &green "#85e89d"
 back: &back "#24292e"
+yellow: &yellow "#ffea7f"
+purple: &purple "#b392f0"
 foreground: &foreground "#5C6370"
 
 general:
@@ -42,13 +43,13 @@ gaps:
   # Whether to scale the gaps with the DPI of the monitor.
   scale_with_dpi: true
   # Gap between adjacent windows.
-  inner_gap: '4px'
+  inner_gap: '8px'
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '4px'
-    right: '4px'
-    bottom: '4px'
-    left: '4px'
+    top: '8px'
+    right: '8px'
+    bottom: '8px'
+    left: '8px'
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -57,7 +58,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: *green
+      color: *purple
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
     hide_title_bar:
@@ -154,7 +155,7 @@ workspaces:
   - name: '4'
     bind_to_monitor: 0
     display_name: '4'
-  # left monitor
+  # right monitor
   - name: '5'
     bind_to_monitor: 1
     display_name: '1'
@@ -167,40 +168,27 @@ workspaces:
   - name: '8'
     bind_to_monitor: 1
     display_name: '4'
-  # left monitor
-  - name: '9'
-    bind_to_monitor: 2
-    display_name: '1'
-  - name: '10'
-    bind_to_monitor: 2
-    display_name: '2'
-  - name: '11'
-    bind_to_monitor: 2
-    display_name: '3'
-  - name: '12'
-    bind_to_monitor: 2
-    display_name: '4'
 
 keybindings:
   # Shift focus in a given direction.
   - commands: ['focus --direction left']
-    bindings: ['alt+h', 'alt+left']
+    bindings: ['alt+h']
   - commands: ['focus --direction right']
-    bindings: ['alt+l', 'alt+right']
+    bindings: ['alt+l']
   - commands: ['focus --direction up']
-    bindings: ['alt+k', 'alt+up']
+    bindings: ['alt+k']
   - commands: ['focus --direction down']
-    bindings: ['alt+j', 'alt+down']
+    bindings: ['alt+j']
 
   # Move focused window in a given direction.
   - commands: ['move --direction left']
-    bindings: ['alt+shift+h', 'alt+shift+left']
+    bindings: ['alt+shift+h']
   - commands: ['move --direction right']
-    bindings: ['alt+shift+l', 'alt+shift+right']
+    bindings: ['alt+shift+l']
   - commands: ['move --direction up']
-    bindings: ['alt+shift+k', 'alt+shift+up']
+    bindings: ['alt+shift+k']
   - commands: ['move --direction down']
-    bindings: ['alt+shift+j', 'alt+shift+down']
+    bindings: ['alt+shift+j']
 
   # As an alternative to the resize keybindings above, resize mode enables
   # resizing via arrow keys or HJKL. The binding mode is defined above with
@@ -264,15 +252,6 @@ keybindings:
     bindings: ['alt+i+3']
   - commands: ['focus --workspace 8']
     bindings: ['alt+i+4']
-  # right monitor
-  - commands: ['focus --workspace 9']
-    bindings: ['alt+o+1']
-  - commands: ['focus --workspace 10']
-    bindings: ['alt+o+2']
-  - commands: ['focus --workspace 11']
-    bindings: ['alt+o+3']
-  - commands: ['focus --workspace 12']
-    bindings: ['alt+o+4']
   # Move focused window to a workspace defined in `workspaces` config.
   # left monitor
   - commands: ['move --workspace 1', 'focus --workspace 1']
@@ -292,12 +271,3 @@ keybindings:
     bindings: ['alt+shift+i+3']
   - commands: ['move --workspace 8', 'focus --workspace 8']
     bindings: ['alt+shift+i+4']
-  # middle monitor
-  - commands: ['move --workspace 9', 'focus --workspace 9']
-    bindings: ['alt+shift+o+1']
-  - commands: ['move --workspace 10', 'focus --workspace 10']
-    bindings: ['alt+shift+o+2']
-  - commands: ['move --workspace 11', 'focus --workspace 11']
-    bindings: ['alt+shift+o+3']
-  - commands: ['move --workspace 12', 'focus --workspace 12']
-    bindings: ['alt+shift+o+4']

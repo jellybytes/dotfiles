@@ -27,10 +27,10 @@ bars:
       width: "100%"
       height: 32
     padding:
-      top: 4
-      left: 4
+      top: 0
+      left: 0
       bottom: 0
-      right: 4
+      right: 0
     widgets:
       left: [
         "home",
@@ -76,7 +76,8 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "\uf017 {%H:%M}"
+      label: "{%d-%m-%y %H:%M:%S}"
+      # label: "\uf017 {%H:%M}"
       # label: "\uf017 {%H:%M:%S}"
       # label_alt: "\uf017 {%d-%m-%y %H:%M:%S}"
       locale: ""

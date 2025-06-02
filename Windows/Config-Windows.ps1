@@ -8,8 +8,6 @@ if ($param -eq "set") {
 	Copy-Item .\ps\Microsoft.PowerShell_profile.ps1  ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -Force
 	# glazeWM
 	Copy-Item .\glazewm\config.yaml ~\.config\glazewm\config.yaml -Force
-	# superfile
-	Copy-Item .\superfile\config.toml ~\.config\superfile\config.toml -Force
 	# yasb
 	Copy-Item .\yasb\config.yaml ~\.config\yasb\config.yaml -Force
 	Copy-Item .\yasb\styles.css ~\.config\yasb\styles.css -Force
@@ -25,8 +23,6 @@ elseif ($param -eq "get") {
 	Copy-Item ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 .\ps\Microsoft.PowerShell_profile.ps1 -Force
 	# glazeWM
 	Copy-Item ~\.config\glazewm\config.yaml .\glazewm\config.yaml -Force
-	# superfile
-	Copy-Item ~\.config\superfile\config.toml .\superfile\config.toml -Force
 	# yasb
 	Copy-Item ~\.config\yasb\config.yaml .\yasb\config.yaml -Force
 	Copy-Item ~\.config\yasb\styles.css .\yasb\styles.css -Force
